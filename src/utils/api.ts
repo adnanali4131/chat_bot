@@ -11,7 +11,7 @@ export async function fetchOpenGptData(input) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${""}`
+      'Authorization': `Bearer ${"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"}`
     },
     body: JSON.stringify({
       model: "gpt-3.5-turbo",  
