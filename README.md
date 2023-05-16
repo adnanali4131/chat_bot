@@ -20,6 +20,11 @@
 3. Update `manifest.json`, important fields include `version`, `name` and `description`
 4. Update `webpack.commmon.js`, the title in the `getHtmlPlugins` function should be your extension name
 
+# add Key in auth
+
+1. add your `auth api key` in utils/api key
+2. get your key from `openai.com`
+
 # Production Build
 
 1. `npm run build` to generate a minimized production build in the `dist` folder
