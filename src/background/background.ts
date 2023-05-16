@@ -1,4 +1,18 @@
-// TODO: background script
-chrome.runtime.onInstalled.addListener(() => {
-  // TODO: on installed function
-})
+chrome.runtime.onInstalled.addListener((details) => {
+  chrome.contextMenus.create({
+    title: "Search on GPT",
+    id: "GPT3",
+    contexts: ["page", "selection"],
+  });
+
+  chrome.contextMenus.onClicked.addListener((e) => {
+    const selectedData = e.selectionText;
+    console.log(selectedData)
+
+    // Store the selected data in Chrome's local storage
+    chrome.storage.local.set({ "selectedData": selectedData }, function() {
+        console.log('Value is set to ' + selectedData);
+    });
+});
+
+});
